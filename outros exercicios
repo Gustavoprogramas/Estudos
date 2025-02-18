@@ -9,3 +9,27 @@ preços desses produtos. Elabore um programa que leia o preço
 de um produto, o valor do desconto (em porcentagem) e calcule
 o novo preço. Imprimir o valor do produto, o desconto e o novo
 valor.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (){
+    setlocale (LC_ALL, "Portuguese");
+    float preco1, preco2, desconto, descontot;
+    printf ("\n\tInsira o valor do produto: ");
+    scanf ("%f", &preco1);
+    printf ("\n\tInsira o desconto, em porcentagem: ");
+    scanf ("%f", &desconto);
+
+    descontot = preco1 * (desconto/100);
+    preco2 = preco1 - descontot;
+
+    printf ("\n\tO valor do produto que tinha o preço de \t%.1f, com o desconto de \t%.1f é R$ \t%.2f ", preco1, desconto, preco2);
+    system ("pause");
+
+
+
+
+}
+
