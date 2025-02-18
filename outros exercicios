@@ -1,3 +1,11 @@
 1: Faça um programa para receber um número inteiro
 representando segundos e imprimir a quantidade
 correspondente em horas, minutos e segundos
+
+
+2: A loja “FiqueFeliz” resolveu liquidar todos os seus produtos, para
+isso necessita de um programa que ajude calcular os novos
+preços desses produtos. Elabore um programa que leia o preço
+de um produto, o valor do desconto (em porcentagem) e calcule
+o novo preço. Imprimir o valor do produto, o desconto e o novo
+valor.
