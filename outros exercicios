@@ -1,6 +1,22 @@
 1: Faça um programa para receber um número inteiro
 representando segundos e imprimir a quantidade
 correspondente em horas, minutos e segundos
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (){
+    setlocale (LC_ALL, "Portuguese");
+    int h, m, s, restos;
+    printf ("\n\tQuantos segundos? ");
+    scanf ("%d", &s);
+
+    h = s/3600;
+    m = s % 3600/60;
+    restos = s % 60;
+
+    printf ("\n\tEm %d segundos, temos: %d:%d:%d horas", s, h, m, restos);
+}
 
 
 2: A loja “FiqueFeliz” resolveu liquidar todos os seus produtos, para
