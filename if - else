@@ -1,1 +1,99 @@
+ 1. Faça um Programa que peça um valor e mostre na tela se o valor 
+é positivo, negativo ou nulo.
+int main () {
+    int num;
+printf ("\n\t o valor");
+scanf ("%d", &num);
 
+if (num < 0)
+printf ("negativo");
+else if (num > 0)
+printf ("positivo");
+else
+    printf ("nulo");
+}
+
+2. Elabora um programa que ao receber um número inteiro 
+determine retorne se o mesmo é par ou ímpar
+int main () {
+    int num;
+printf ("\n\t o valor");
+scanf ("%d", &num);
+
+if (num % 2 == 0)
+    printf ("par");
+else if (num %2 != 0)
+printf ("impar");
+}
+3.Faça um Programa que peça dois números e imprima o maior 
+deles.
+int main () {
+    int num1, num2;
+printf ("\n\t 2 valores: ");
+scanf ("%d %d", &num1, &num2);
+
+if (num1 - num2 < 0)
+    printf ("%d", num2);
+else if (num2 - num1 <0)
+printf ("%d", num1);
+
+}
+4.Desenvolver um algoritmo que leia um número inteiro e 
+verifique se o número é divisível por 5 e por 3 ao mesmo tempo
+nt main () {
+    int num1, num2;
+printf ("\n\t 1 valor: ");
+scanf ("%d", &num1);
+
+if (num1 % 5 ==0 && num1 % 3 ==0)
+    printf ("sim");
+        else
+        printf ("nao");
+}
+5.Desenvolver um algoritmo para ler um número “x” e calcular e 
+imprimir o valor de “y” de acordo com as condições abaixo: 
+• y = x , se x < 1;
+ • y = 0 , se x = 1;
+ • y = x² , se x > 1
+int main () {
+    int num1, num2;
+printf ("\n\t 1 valor: ");
+scanf ("%d", &num1);
+
+    if ( num1 < 1)
+num2 = num1;
+else
+
+
+    if ( num1 == 1)
+    num2 = 0;
+else
+
+if ( num1 > 1)
+    num2 = num1 * num1;
+printf ("%d", num2);
+6.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int num1, num2, num3, barato;
+printf ("3 valores: ");
+scanf ("%d %d %d", &num1, &num2, &num3);
+
+if (num1 - num2 < 0 && num1 - num3 < 0 )
+printf ("%d", num1);
+else if (num2 - num1 <0 && num2 - num3 <0)
+printf ("%d", num2);
+else if (num3 - num1 <0 && num3 - num2 <0)
+    printf ("%d", num3);
+    else if (num1 == num2 && num1 - num3 < 0)
+        printf ("%d", num1);
+    else if (num3 == num2 && num3- num1<0)
+        printf ("%d", num3);
+
+
+
+
+
+}
