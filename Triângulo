@@ -1,0 +1,56 @@
+/**5. Crie um programa que leia três lados de um triângulo e
+informe que tipo de triângulo ele é:
+• Equilátero (todos os lados são iguais),
+• Isósceles (dois lados iguais),
+• Escaleno (todos os lados diferentes).
+• O programa também deve verificar se os três lados formam
+um triângulo válido (a soma de dois lados deve ser maior
+que o terceiro lado)**/
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale (LC_ALL, "portuguese");
+    int ladoa, ladob, ladoc;
+
+    printf ("\n\tDigite o lado A: ");
+    scanf ("%d", &ladoa);
+
+    printf ("\n\tDigite o lado B: ");
+    scanf ("%d", &ladob);
+
+    printf ("\n\tDigite o lado C: ");
+    scanf ("%d", &ladoc);
+
+    if (ladoa + ladob > ladoc && ladob + ladoc > ladoa && ladoa + ladoc > ladob)
+    {
+        if (ladoa == ladob && ladoa == ladoc)
+        {
+            printf ("\n\tEste é um triângulo equilátero. ");
+        }
+        else
+        if (ladoa==ladob && ladoc != ladob)
+        {
+            printf ("\n\tÉ um trângulo isósceles. ");
+        }
+            else
+                if (ladoa==ladoc&& ladob != ladoc)
+            {
+                printf ("\n\tÉ um trângulo isósceles. ");
+            }
+                else
+                    if (ladoc == ladob && ladoa != ladoa)
+                {
+                    printf ("\n\tÉ um trângulo isósceles. ");
+                }
+                    else
+                        if (ladoa != ladob && ladoc != ladob && ladoa != ladoc )
+                    {
+                        printf ("\n\tÉ um triângulo Escaleno. ");
+                    }
+    }
+    else
+        printf ("\n\tEste triângulo não existe. ");
+}
