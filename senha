@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+setlocale (LC_ALL, "Portuguese");
+
+int i=0;
+int senha, senhad;
+senha = 123;
+
+
+do
+{
+    printf("\n\tDigite a senha: ");
+    scanf("%d", &senhad);
+    if (senhad==senha)
+    {
+        printf("\n\tParabéns é você mesmo! ");
+        exit(0);
+    }
+    else
+    {
+        if (i<2)
+        {
+            printf("\n\tTente novamente. ");
+        }
+
+    }
+    i++;
+}
+while (i<3);
+
+
+
+
+
+}
+
+
+
+
+
+
