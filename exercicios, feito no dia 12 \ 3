@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+    int base, exp, expp, pot=1;
+    printf("\n\tDigite a base da potência: ");
+    scanf("%d", &base);
+    printf("\n\tDigite o expoente da potência: ");
+    scanf("%d", &exp);
+    expp = exp;
+
+    for (; exp>0;exp--)
+    {
+        pot =pot * base;
+
+
+
+
+    }
+    printf ("\n\tO resultado da potência de %d com expoente %d, é igual a %d.", base, expp, pot);
+
+
+
+}
