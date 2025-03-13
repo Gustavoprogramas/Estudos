@@ -90,4 +90,43 @@ int main ()
 4.) Elabore um programa que leia vários números
 inteiros, até o usuário digitar um número negativo. Para cada
 número lido deverá ser calculado e impresso seu fatorial
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+    int n, fat, ni;
+    for (;;)
+    {
+
+    system ("cls");
+    printf("\n\tDigite o número: ");
+    scanf("%d", &n);
+    fat= n-1;
+    ni=n;
+    if (n>0)
+    {
+
+
+        for (;fat>1;fat--)
+    {
+        n = n* fat;
+
+    }
+    printf("\n\tO lagritimo de %d é %d\n\ ", ni, n);
+    system ("pause");
+    }
+    else
+    {
+        printf("\n\tVocê digitou um número negativo! \n\ Saindo do programa... \n\ ");
+        system ("pause");
+        return 0;
+    }
+    }
+
+
+
+}
 
