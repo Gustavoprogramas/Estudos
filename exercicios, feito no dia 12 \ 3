@@ -186,3 +186,38 @@ int main ()
     printf("\n\tVocê digitou %d número(s) ímpare(s) e a soma dos pares foi de %d. ", i, par);
 }
 
+7.) #include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+    int n, num, maior, menor;
+    maior = 0;
+    menor = 987564376588765383756847569476945393957;
+    printf("\n\tQuantos números você irá inserir? ");
+    scanf("%d", &n);
+    if (n>=10)
+    {
+
+    for (; n>0; n--)
+    {
+        printf("\n\tDigite o número \n\ ");
+        scanf ("%d", &num);
+        if (num>maior)
+        {
+            maior = num;
+        }
+            if (num<menor)
+        {
+            menor = num;
+        }
+    }
+    }
+    else
+    {
+        printf("\n\tVocê deve inserir 10 ou mais números. ");
+    }
+    printf("\n\tO maior número digitado foi %d e o menor número digitado foi %d \n\ ", maior, menor);
+}
