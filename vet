@@ -1,0 +1,30 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <locale.h>
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+    int vet[10] = {1,2,3,4,45,6,7,8,9,10};
+    int maior, i;
+    for (i=0; i<10;i++)
+    {
+        if (i == 0)
+        {
+            vet[i] = maior;
+
+
+        }
+        else
+            if (vet[i] > maior)
+        {
+            maior = vet[i];
+        }
+
+
+    }
+
+printf("\n\t%d", maior);
+
+
+
+}
