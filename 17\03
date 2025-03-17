@@ -87,6 +87,46 @@ int main ()
 
     }
 
+Escreva um que solicita 10 números ao usuário, e ao final mostre
+os dois maiores números digitados pelo usuário.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+    int num, maior_1, maior_2, i, cont_num = 1;
+    printf("\n\tDigite o %dº número: ", cont_num);
+        cont_num ++;
+        scanf("%d", &num);
+        maior_1 = num;
+        maior_2 = num;
+    for (i=9; i>0; i--)
+    {
+        printf("\n\tDigite o %dº número: ", cont_num);
+        cont_num ++;
+        scanf("%d", &num);
+        if (num > maior_1 )
+        {
+            maior_1 = num;
+        }
+        else
+        if (num > maior_2)
+        {
+            maior_2 = num;
+        }
+
+
+    }
+    printf("\n\tO Maior número digitado foi %d e o segundo maior número digitado foi %d.", maior_1, maior_2);
+    system ("pause");
+}
+
+
+
+
 
 
 
