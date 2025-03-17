@@ -65,3 +65,30 @@ int main ()
 Elabore um programa que leia um número e imprima todos os
 números divisíveis por 4 que sejam menores que este número lido
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+    int num, div_num;
+    printf("\n\tDigite um número:");
+    scanf("%d",&num);
+    num--;
+    for (;num>0;num--)
+    {
+        if (num%4==0)
+        {
+             printf ("\n\tO número %d é dívisivel por 4! ", num);
+        }
+
+    }
+
+    }
+
+
+
+
+
+
