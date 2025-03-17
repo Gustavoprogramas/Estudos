@@ -125,7 +125,10 @@ int main ()
 }
 
 
-
+Faça um programa que peça um número
+inteiro positivo e em seguida mostre este número invertido.
+Independente do número de dígitos do número
+Exemplo: 2349 -> Número Invertido 9432
 
 
 
