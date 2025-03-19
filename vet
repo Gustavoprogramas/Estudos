@@ -99,3 +99,48 @@ int main ()
     }
 
 }
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#define tam 20
+
+
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+    int X[tam], Y[tam], Z[tam];
+
+int i, n =0;
+
+
+do
+{
+    printf("\n\tInsira o tamanho do vetor (máximo 20) ");
+    scanf("%d", &n);
+    if (n<=0 || n>20);
+    {
+        printf("\n\tTamanho inválido");
+    }
+
+}while(n<=0 || n>20);
+for (i=0; i<n; i++)
+{
+    printf("\n\tX[%d]: ", i);
+    scanf("%d", &X[i]);
+}
+for (i=0; i<n; i++)
+{
+    printf("\n\tY[%d]: ", i);
+    scanf("%d", &Y[i]);
+    Z[i] = X[i] * Y[i];
+}
+for (i=0; i<n; i++)
+{
+    printf("\n\t%d * %d = %d ", X[i], Y[i], Z[i]);
+}
+
+
+}
+
