@@ -144,3 +144,49 @@ for (i=0; i<n; i++)
 
 }
 
+
+
+
+
+
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <locale.h>
+#define tam 20
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+
+	int i, n = 0, k;
+	int X[tam], Y[tam];
+
+	printf("\n\tDigite o valor de K: ");
+	scanf_s("%d", &k);
+	do
+	{
+		printf("\n\tDigite o tamanho do vetor, máximo é 20: ");
+		scanf_s("%d", &n);
+		if (n <= 0 || n > 20)
+		{
+			printf("\n\tO valor máximo é 20 e o mínimo é 1. ");
+		}
+		else
+		{
+			break;
+		}
+	} while (n > 20 || n <= 0);
+	for (i = 0; i < n; i++)
+	{
+		printf("\n\tDigite X[%d]", i);
+		scanf_s("\n\t%d", &X[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		Y[i] = X[i] * k;
+		printf("\n\t%d * %d = %d", X[i], k, Y[i]);
+		
+	}
+
+}
