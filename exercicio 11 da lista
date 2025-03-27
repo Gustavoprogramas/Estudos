@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale (LC_ALL, "Portuguese");
+
+    int salario, filhos, soma_filhos = 0, soma_salario = 0, maior_salario, i = 1;
+
+    float porcentagem_salario_menor = 0, media_filhos, media_salario;
+
+    media_salario = 0;
+
+    printf("\n\tQual o salário do individuo? ");
+    scanf("%d", &salario);
+
+    if (salario<0)
+    {
+        printf("\n\tVocê digitou um slário negativo logo no começo, encerrando a leitura. ");
+        printf("\n\n");
+        system("Pause");
+        return 0;
+
+    }
+    maior_salario = salario;
+    soma_salario = soma_salario + salario;
+
+    printf("\n\tQuantos filhos o individuo possui? ");
+    scanf("%d", &filhos);
+
+    soma_filhos = soma_filhos + filhos;
+
+    do
+    {
+        printf("\n\tQual o salário do individuo? ");
+        scanf("%d", &salario);
+
+        if (salario>0)
+        {
+            soma_salario = soma_salario + salario;
+        }
+        else
+            if(salario<0)
+        {
+            printf("\n\tSaindo do programa, não existe salário negativo. ");
+            printf("\n\n");
+            break;
+            system("Pause");
+            return 0;
+        }
+
+        printf("\n\tQuantos filhos o individuo possui? ");
+        scanf("%d", &filhos);
+
+        soma_filhos = soma_filhos + filhos;
+
+        if (salario > maior_salario)
+        {
+            maior_salario = salario;
+        }
+        if (salario<1500)
+        {
+            porcentagem_salario_menor++;
+        }
+
+        i++;
+
+    }while (salario>0);
+
+    media_filhos = (float)soma_filhos / i;
+    media_salario = (float)soma_salario / i;
+    porcentagem_salario_menor = porcentagem_salario_menor/i;
+    porcentagem_salario_menor = porcentagem_salario_menor * 100;
+
+    printf("\n\tO maior salario das %d pessoas foi R$%d", i, maior_salario);
+    printf("\n\n");
+    printf("\n\tA média do salário da população foi de R$%.2f", media_salario);
+    printf("\n\n");
+    printf("\n\tA média do número de filhos da população foi de %.2f filhos", media_filhos);
+    printf("\n\tA porcentagem de salários menores que R$1500,00 é de %.2f Porcento", porcentagem_salario_menor);
+    printf("\n\n");
+    system("Pause");
+    return 0;
+}
